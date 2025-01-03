@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BasicPractice
 {
-    internal class ArrayBased
+    public class ArrayBased
     {
         public static void SmallestGap()
         {
@@ -30,17 +30,18 @@ namespace BasicPractice
             Console.WriteLine("The smallest Gap between elements is : " + gap);
         }
 
-        public static void RemoveDuplicates()
+        public int[] RemoveDuplicates(int[] arr)
         {
             //Object[] arr = {"Hey",2.5,'C',"Java","Hey",'D','c',55,2 };
-            int[] arr = CreateArray();
+            //int[] arr = CreateArray();
 
             Console.WriteLine("\nAfter removing duplicates: ");
-            var newArr = arr.Distinct();
+            var newArr = arr.Distinct().ToArray();
             foreach ( var item in newArr )
             {
                 Console.Write( item+" " );
             }
+            return newArr;
         }
 
         public static void SecondLargest()

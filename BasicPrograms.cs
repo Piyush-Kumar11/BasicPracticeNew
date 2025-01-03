@@ -6,10 +6,37 @@ using System.Threading.Tasks;
 
 namespace BasicPractice
 {
-    internal class BasicPrograms
+    public class BasicPrograms
     {
+
+        public List<int> BubbleSort(List<int> items)
+        {
+            for (var i = 0; i < items.Count - 1; i++)
+            {
+                for (var j = 0; j < items.Count - i - 1; j++)
+                {
+                    if (items[j] > items[j + 1])
+                    {
+                        // Swap
+                        var tmp = items[j];
+                        items[j] = items[j + 1];
+                        items[j + 1] = tmp;
+                    }
+                }
+            }
+            return items;
+        }
+
+
+        public int MultiplyTwoNumber(int a, int b)
+        {
+            int mul = (a * b);
+            Console.WriteLine($"Multiplication of {a}*{b} is: {mul}");
+            return mul;
+        }
+
         //Implementing Local Custom Exception
-        public static void Calculate(double n)
+        public static double Calculate(double n)
         {
             try
             {
@@ -21,11 +48,13 @@ namespace BasicPractice
 
                 double res = Math.Sqrt(n);
                 Console.WriteLine($"Square Root of {n} is {res}");
+                return res;
             }
             catch(ZeroNotAllowedException e)
             {
                 Console.WriteLine(e.Message); //Msg passed from the child constructor to the parent class constructor will get printed
                 Console.WriteLine(e); //Calls the ToString method from custom exception class
+                return 0;
             }
             
         }
