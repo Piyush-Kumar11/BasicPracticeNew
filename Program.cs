@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BasicPracticeNew;
 
 namespace BasicPractice
 {
@@ -10,6 +11,8 @@ namespace BasicPractice
     {
         static void Main(string[] args)
         {
+            EnumerationsDemo.RunAllExamples();
+
             //ClassWork.MergeArray();
             //ClassWork.SecondLargest();
             //ClassWork.RemoveDuplicates();
